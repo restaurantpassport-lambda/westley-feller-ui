@@ -2,6 +2,8 @@ const path = require('path');
 const glob = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
+const Critters = require('critters-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const PATHS = {
 	dist: path.join(__dirname, 'dist')
@@ -35,7 +37,7 @@ module.exports = {
 					loader: 'css-loader'
 				},
 				{
-					loader: "postcss-loader"
+					loader: 'postcss-loader'
 				},
 				{
 					loader: 'sass-loader',
@@ -54,5 +56,11 @@ module.exports = {
 		new PurgecssPlugin({
 			paths: glob.sync(`${PATHS.dist}/**/*`,  { nodir: true }),
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'index.html',
+			template: 'src/index.html'
+		}),
+		new Critters({
+		})
 	]
 };
