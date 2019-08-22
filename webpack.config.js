@@ -11,7 +11,7 @@ const PATHS = {
 
 
 module.exports = {
-	entry: './src/index.js',
+	entry: './src/js/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'js/bundle.js'
@@ -50,15 +50,15 @@ module.exports = {
 		}]
 	},
 	plugins: [
+		new HtmlWebpackPlugin({
+			filename: 'index.html',
+			template: 'src/index.html'
+		}),
 		new MiniCssExtractPlugin({
 			filename: 'css/[name].bundle.css'
 		}),
 		new PurgecssPlugin({
 			paths: glob.sync(`${PATHS.dist}/**/*`,  { nodir: true }),
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'index.html',
-			template: 'src/index.html'
 		}),
 		new Critters({
 		})
