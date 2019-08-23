@@ -1,6 +1,9 @@
 @import "variables";
 @import "colors";
 
+/*********
+* Mixins *
+*********/
 @mixin hero-background($bg-image) {
   background-image: $bg-image;
   background-repeat: no-repeat;
@@ -9,25 +12,22 @@
   opacity: 0.9;
 }
 
-.pushed {
-  animation: pushMain 0.15s ease-in-out forwards;
-}
-
-@keyframes pushMain {
-  0% {
-    margin-top: 0;
-  }
-  100% {
-    margin-top: $navbar-menu-height;
-  }
-}
-
+/*****************
+* Helper Classes *
+*****************/
 .is-fullheight-with-navbar {
   height: calc(100vh - #{$navbar-height});
 }
 
 .hero-body.paddingless {
   padding: 0;
+}
+
+/********************
+* Helper Animations *
+********************/
+.pushed {
+  animation: pushMain 0.15s ease-in-out forwards;
 }
 
 .navbar-menu {
@@ -46,35 +46,18 @@
   }
 }
 
+@keyframes pushMain {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: $navbar-menu-height;
+  }
+}
+
+/*****************
+* Global Styling *
+*****************/
 p {
   font-family: $family-secondary;
-}
-
-#opener {
-  @include hero-background(url("../../static/images/sushi.jpg"));
-
-  .hero-body {
-    .column {
-      margin-left: 10%;
-      padding: 5%;
-      background: $dark;
-      border-radius: $radius;
-      opacity: 0.9;
-    }
-  }
-}
-
-#description {
-  @include hero-background(url("../../static/images/map.jpg"));
-
-  .hero-body {
-    .column.right {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 10%;
-      background: darken($blue9, 15);
-      opacity: 0.9;
-    }
-  }
 }

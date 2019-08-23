@@ -1,0 +1,33 @@
+@import "global";
+
+/******************
+* Section Styling *
+******************/
+#opener {
+  @include hero-background(url("../../static/images/sushi.jpg"));
+
+  .hero-body {
+    .column {
+      margin-left: 10%;
+      padding: 5%;
+      background: $dark;
+      border-radius: $radius;
+      opacity: 0.9;
+    }
+  }
+}
+
+#description {
+  @include hero-background(url("../../static/images/map.jpg"));
+
+  .hero-body {
+    .column.right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10%;
+      background: darken($blue9, 15);
+      opacity: 0.9;
+    }
+  }
+}
