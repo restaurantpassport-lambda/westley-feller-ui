@@ -34,7 +34,10 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader"
+            loader: "css-loader",
+            options: {
+              url: false
+            }
           },
           {
             loader: "postcss-loader"
@@ -47,6 +50,13 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif|webp)$/,
+        loader: "file-loader",
+        options: {
+          outputPath: "images"
+        }
       }
     ]
   },
@@ -59,11 +69,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "css/[name].bundle.css"
     }),
-    new PurgecssPlugin({
-      paths: glob.sync(`${PATHS.dist}/**/*`, { nodir: true })
-    }),
-    new Critters({
-      pruneSource: false
-    })
+    // new PurgecssPlugin({
+    //   paths: glob.sync(`${PATHS.dist}/**/*`, { nodir: true })
+    // }),
+    // new Critters({
+    //   pruneSource: false
+    // })
   ]
 };

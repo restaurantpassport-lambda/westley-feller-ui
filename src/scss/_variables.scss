@@ -56,8 +56,8 @@ $button-border-color: $grey;
 $button-hover-border: transparent;
 $button-active-border-color: transparent;
 
-$radius: 0;
-$radius-small: 0;
+$radius: 3px;
+$radius-small: 1px;
 
 $input-hover-color: $link-hover;
 
@@ -69,7 +69,8 @@ $table-row-hover-background-color: $grey-darker;
 $table-striped-row-even-background-color: $grey-darker;
 $table-striped-row-even-hover-background-color: lighten($grey-darker, 4);
 
-$navbar-background-color: $background;
+$navbar-background-color: $dark;
+$navbar-height: 3.25rem;
 $navbar-item-color: $text;
 $navbar-item-hover-color: $grey-light;
 $navbar-item-active-color: $primary;

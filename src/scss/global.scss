@@ -1,3 +1,53 @@
+@import "variables";
+@import "colors";
+
+@mixin hero-background($bg-image) {
+  background-image: $bg-image;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.is-fullheight-with-navbar {
+  height: calc(100vh - #{$navbar-height});
+}
+
 p {
   font-family: $family-secondary;
+}
+
+#opener {
+  @include hero-background(url("../../static/images/sushi.jpg"));
+}
+
+#description {
+  @include hero-background(url("../../static/images/map.jpg"));
+}
+
+#opener {
+  .hero-body {
+    .column {
+      margin-left: 10%;
+      padding: 5%;
+      background: $dark;
+      border-radius: $radius;
+      opacity: 0.9;
+    }
+  }
+}
+
+#description {
+  .hero-body {
+    padding: 0;
+
+    .column.right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10%;
+      background: $blue9;
+      opacity: 0.95;
+    }
+  }
 }
