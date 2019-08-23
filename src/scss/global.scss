@@ -13,6 +13,10 @@
   height: calc(100vh - #{$navbar-height});
 }
 
+.hero-body.paddingless {
+  padding: 0;
+}
+
 p {
   font-family: $family-secondary;
 }
@@ -35,8 +39,6 @@ p {
   @include hero-background(url("../../static/images/map.jpg"));
 
   .hero-body {
-    padding: 0;
-
     .column.right {
       display: flex;
       flex-direction: column;
