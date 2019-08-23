@@ -19,13 +19,7 @@ p {
 
 #opener {
   @include hero-background(url("../../static/images/sushi.jpg"));
-}
 
-#description {
-  @include hero-background(url("../../static/images/map.jpg"));
-}
-
-#opener {
   .hero-body {
     .column {
       margin-left: 10%;
@@ -38,6 +32,8 @@ p {
 }
 
 #description {
+  @include hero-background(url("../../static/images/map.jpg"));
+
   .hero-body {
     padding: 0;
 
@@ -46,8 +42,8 @@ p {
       flex-direction: column;
       justify-content: center;
       padding: 10%;
-      background: $blue9;
-      opacity: 0.95;
+      background: darken($blue9, 15);
+      opacity: 0.9;
     }
   }
 }

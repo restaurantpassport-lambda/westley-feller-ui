@@ -69,11 +69,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "css/[name].bundle.css"
     }),
-    // new PurgecssPlugin({
-    //   paths: glob.sync(`${PATHS.dist}/**/*`, { nodir: true })
-    // }),
-    // new Critters({
-    //   pruneSource: false
-    // })
+    new PurgecssPlugin({
+      paths: glob.sync(`${PATHS.dist}/**/*`, { nodir: true })
+    }),
+    new Critters({
+      pruneSource: false
+    })
   ]
 };
