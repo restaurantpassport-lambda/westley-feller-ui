@@ -9,12 +9,41 @@
   opacity: 0.9;
 }
 
+.pushed {
+  animation: pushMain 0.15s ease-in-out forwards;
+}
+
+@keyframes pushMain {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: $navbar-menu-height;
+  }
+}
+
 .is-fullheight-with-navbar {
   height: calc(100vh - #{$navbar-height});
 }
 
 .hero-body.paddingless {
   padding: 0;
+}
+
+.navbar-menu {
+  animation: navAnimOpen 0.8s ease-in-out;
+}
+
+@keyframes navAnimOpen {
+  0% {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
 }
 
 p {

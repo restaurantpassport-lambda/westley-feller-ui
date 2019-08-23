@@ -71,6 +71,7 @@ $table-striped-row-even-hover-background-color: lighten($grey-darker, 4);
 
 $navbar-background-color: $dark;
 $navbar-height: 3.25rem;
+$navbar-menu-height: calc(#{$navbar-height} + 0.75rem);
 $navbar-item-color: $text;
 $navbar-item-hover-color: $grey-light;
 $navbar-item-active-color: $primary;
