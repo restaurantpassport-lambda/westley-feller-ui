@@ -1,3 +1,5 @@
+@import "colors";
+
 @import url("https://fonts.googleapis.com/css?family=Lora|Maven+Pro|Simonetta&display=swap");
 
 $grey-darker: #1f2d3b;
@@ -6,11 +8,11 @@ $grey: #4e5d6c;
 $grey-light: #8694a4;
 $grey-lighter: #dee5ed;
 
-$orange: #df691a;
-$yellow: #f0ad4e;
-$green: #5cb85c;
-$blue: #5bc0de;
-$red: #d9534f;
+$orange: $base;
+$yellow: $yellow5;
+$green: $green5;
+$blue: $blue5;
+$red: $red5;
 
 $primary: $orange !default;
 
@@ -61,14 +63,6 @@ $radius-small: 1px;
 
 $input-hover-color: $link-hover;
 
-$table-color: $text;
-$table-head-color: $grey-lighter;
-$table-background-color: $grey-dark;
-$table-cell-border: 1px solid $grey;
-$table-row-hover-background-color: $grey-darker;
-$table-striped-row-even-background-color: $grey-darker;
-$table-striped-row-even-hover-background-color: lighten($grey-darker, 4);
-
 $navbar-background-color: $dark;
 $navbar-height: 3.25rem;
 $navbar-menu-height: calc(#{$navbar-height} + 0.75rem);
@@ -82,14 +76,3 @@ $navbar-dropdown-item-active-color: $primary;
 $navbar-dropdown-background-color: $background;
 $navbar-dropdown-arrow: currentColor;
 
-$dropdown-content-background-color: $background;
-$dropdown-item-color: $text;
-$dropdown-item-hover-color: $text-light;
-
-$tabs-toggle-link-active-background-color: $background;
-$tabs-toggle-link-active-border-color: $border;
-$tabs-toggle-link-active-color: #ffffff;
-$tabs-boxed-link-active-background-color: $body-background-color;
-
-$pagination-color: $link;
-$pagination-border-color: $border;
