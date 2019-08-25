@@ -1,0 +1,78 @@
+@import "colors";
+
+@import url("https://fonts.googleapis.com/css?family=Lora|Maven+Pro|Simonetta&display=swap");
+
+$grey-darker: #1f2d3b;
+$grey-dark: #2b3e50;
+$grey: #4e5d6c;
+$grey-light: #8694a4;
+$grey-lighter: #dee5ed;
+
+$orange: $base;
+$yellow: $yellow5;
+$green: $green5;
+$blue: $blue5;
+$red: $red5;
+
+$primary: $orange !default;
+
+$dark: darken($grey-darker, 3);
+
+$title-color: $grey-lighter;
+$title-weight: 400;
+$subtitle-strong-color: $grey-lighter;
+$subtitle-color: darken($grey-lighter, 10);
+$subtitle-strong-color: darken($grey-lighter, 10);
+
+$background: $grey-dark;
+$body-background-color: $grey-darker;
+$footer-background-color: $background;
+
+$border: $grey;
+
+$family-sans-serif: "Maven Pro", sans-serif;
+$family-secondary: "Lora", serif;
+$subtitle-family: "Simonetta", serif;
+
+$text: $grey-lighter;
+$text-strong: darken($grey-lighter, 10);
+$text-light: $grey-light;
+
+$box-background-color: $background;
+
+$card-shadow: none;
+$card-background-color: darken($body-background-color, 1);
+$card-header-box-shadow: none;
+$card-header-background-color: darken($body-background-color, 3);
+$card-footer-background-color: darken($body-background-color, 3);
+
+$link: $grey-light;
+$link-hover: $grey-lighter;
+$link-focus: $grey-lighter;
+$link-active: $grey-lighter;
+
+$button-color: $grey-lighter;
+$button-background-color: $grey;
+$button-border-color: $grey;
+
+$button-hover-border: transparent;
+$button-active-border-color: transparent;
+
+$radius: 3px;
+$radius-small: 1px;
+
+$input-hover-color: $link-hover;
+
+$navbar-background-color: $dark;
+$navbar-height: 3.25rem;
+$navbar-menu-height: calc(#{$navbar-height} + 0.75rem);
+$navbar-item-color: $text;
+$navbar-item-hover-color: $grey-light;
+$navbar-item-active-color: $primary;
+$navbar-item-hover-background-color: rgba($grey-darker, 0.1);
+$navbar-item-active-background-color: rgba($grey-darker, 0.1);
+$navbar-dropdown-item-hover-color: $grey-light;
+$navbar-dropdown-item-active-color: $primary;
+$navbar-dropdown-background-color: $background;
+$navbar-dropdown-arrow: currentColor;
+

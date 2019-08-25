@@ -1,0 +1,63 @@
+@import "variables";
+@import "colors";
+
+/*********
+* Mixins *
+*********/
+@mixin hero-background($bg-image) {
+  background-image: $bg-image;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+/*****************
+* Helper Classes *
+*****************/
+.is-fullheight-with-navbar {
+  height: calc(100vh - #{$navbar-height});
+}
+
+.hero-body.paddingless {
+  padding: 0;
+}
+
+/********************
+* Helper Animations *
+********************/
+.pushed {
+  animation: pushMain 0.15s ease-in-out forwards;
+}
+
+.navbar-menu {
+  animation: navOpen 0.6s ease-in-out;
+}
+
+@keyframes navOpen {
+  0% {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes pushMain {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: $navbar-menu-height;
+  }
+}
+
+/*****************
+* Global Styling *
+*****************/
+p {
+  font-family: $family-secondary;
+}
