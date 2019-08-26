@@ -31,3 +31,7 @@
     }
   }
 }
+
+#track {
+  @include hero-background("../../static/images/list.jpg");
+}
