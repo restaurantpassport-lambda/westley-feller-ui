@@ -6,14 +6,14 @@ const Critters = require("critters-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const PATHS = {
-  dist: path.join(__dirname, "dist")
+  dist: path.join("./dist")
 };
 
 module.exports = {
   entry: "./src/js/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "js/bundle.js"
+    path: path.resolve("./dist"),
+    filename: "bundle.js"
   },
   optimization: {
     splitChunks: {
@@ -67,11 +67,11 @@ module.exports = {
       inject: false
     }),
     new MiniCssExtractPlugin({
-      filename: "css/[name].bundle.css"
+      filename: "[name].bundle.css"
     }),
-    new PurgecssPlugin({
-      paths: glob.sync(`${PATHS.dist}/**/*`, { nodir: true })
-    }),
+    // new PurgecssPlugin({
+    //   paths: glob.sync(`${PATHS.dist}/**/*`, { nodir: true })
+    // }),
     new Critters({
       pruneSource: false
     })
