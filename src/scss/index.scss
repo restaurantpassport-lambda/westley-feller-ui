@@ -4,7 +4,7 @@
 * Section Styling *
 ******************/
 #opener {
-  @include hero-background(url("../images/sushi.jpg"));
+  @include hero-background(url("images/sushi.jpg"));
 
   .hero-body {
     .column {
@@ -18,7 +18,7 @@
 }
 
 #description {
-  @include hero-background(url("../images/map.jpg"));
+  @include hero-background(url("images/map.jpg"));
 
   .hero-body {
     .column.right {
