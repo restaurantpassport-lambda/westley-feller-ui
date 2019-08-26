@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ResponsiveLoader = require("responsive-loader/sharp");
 
 const PATHS = {
+  src: path.join(__dirname, "src"),
   dist: path.join("./dist")
 };
 
@@ -81,7 +82,7 @@ module.exports = {
       filename: "[name].bundle.css"
     }),
     new PurgecssPlugin({
-      paths: glob.sync(`${PATHS.dist}/**/*`, { nodir: true })
+      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true })
     }),
     new Critters({
       pruneSource: false
