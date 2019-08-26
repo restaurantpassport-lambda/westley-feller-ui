@@ -1,7 +1,5 @@
 require("../scss/main.scss");
 
-const responsiveImage = require("../../static/images/sushi.jpg?");
-
 document.addEventListener("DOMContentLoaded", () => {
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(

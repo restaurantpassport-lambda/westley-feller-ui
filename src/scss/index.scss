@@ -8,16 +8,16 @@
 
   .hero-body {
     .column {
-      margin-left: 10%;
+      margin-left: 5%;
       padding: 5%;
       background: $dark;
       border-radius: $radius;
-      opacity: 0.9;
+      @include fade-in(0.9, 0.5s);
     }
   }
 }
 
-#description {
+#map {
   @include hero-background("../../static/images/map.jpg");
 
   .hero-body {
@@ -28,10 +28,46 @@
       padding: 10%;
       background: darken($blue9, 15);
       opacity: 0.9;
+
+      hr {
+        background-color: $cyan3;
+      }
     }
   }
 }
 
 #track {
   @include hero-background("../../static/images/list.jpg");
+
+  .hero-body {
+    .column {
+      padding: 5%;
+      background: $dark;
+      border-radius: $radius;
+      opacity: 0.9;
+
+      hr {
+        background-color: $violet3;
+      }
+    }
+  }
+}
+
+#decide {
+  @include hero-background("../../static/images/sad.jpg");
+
+  .hero-body {
+    .column.right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10%;
+      background: darken($blue9, 15);
+      opacity: 0.9;
+
+      hr {
+        background-color: $yellow3;
+      }
+    }
+  }
 }
