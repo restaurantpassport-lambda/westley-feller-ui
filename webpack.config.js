@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
 const Critters = require("critters-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ResponsiveLoader = require("responsive-loader/sharp");
 
 const PATHS = {
   dist: path.join("./dist")
@@ -30,14 +31,24 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(jpg|png)$/i,
+        loader: "responsive-loader",
+        options: {
+          // If you want to enable sharp support:
+          adapter: ResponsiveLoader,
+          sizes: [768, 1024, 1216, 1408],
+          outputPath: "images"
+        }
+      },
+      {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: {
-              url: false
-            }
+            // options: {
+            //   url: false
+            // }
           },
           {
             loader: "postcss-loader"
@@ -69,9 +80,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].bundle.css"
     }),
-    // new PurgecssPlugin({
-    //   paths: glob.sync(`${PATHS.dist}/**/*`, { nodir: true })
-    // }),
+    new PurgecssPlugin({
+      paths: glob.sync(`${PATHS.dist}/**/*`, { nodir: true })
+    }),
     new Critters({
       pruneSource: false
     })
