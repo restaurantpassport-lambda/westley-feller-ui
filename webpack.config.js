@@ -76,7 +76,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "src/index.html",
-      inject: false
+      inject: false,
+      favicon: "favicon.png"
     }),
     new MiniCssExtractPlugin({
       filename: "[name].bundle.css"
