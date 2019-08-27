@@ -4,7 +4,8 @@ module.exports = {
     "postcss-font-magician": {
       variants: {
         "Lora": {
-          "regular 400": ["woff2"]
+          "regular 400": ["woff2"],
+          "regular 600": ["woff2"]
         },
         "Simonetta": {
           "regular 400": ["woff2"]

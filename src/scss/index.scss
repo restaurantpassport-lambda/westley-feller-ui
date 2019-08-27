@@ -1,5 +1,23 @@
 @import "global";
 
+html,
+body {
+  overflow-y: visible;
+}
+
+.site-wrapper {
+  height: calc(100vh - #{$navbar-height});
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+header,
+section,
+footer {
+  //height: calc(100vh + 3.25rem);
+  scroll-snap-align: start;
+}
+
 /******************
 * Section Styling *
 ******************/
@@ -68,5 +86,27 @@
         background-color: $yellow3;
       }
     }
+  }
+}
+
+#cta {
+  .hero-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10%;
+  }
+
+  h2 {
+    font-size: 7vh;
+
+    span {
+      font-weight: 600;
+      font-family: $family-secondary;
+    }
+  }
+
+  .button {
+    min-width: 30%;
   }
 }
