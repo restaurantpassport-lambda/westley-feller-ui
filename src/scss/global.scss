@@ -83,7 +83,7 @@
 }
 
 // Fade content in
-@mixin fade-in($opacity: 1, $time: 1s) {
+@mixin fade-in($opacity: 1, $time: 0.5s) {
   animation: fadeIn $time forwards;
 
   @keyframes fadeIn {
@@ -132,7 +132,7 @@ footer {
 ********************/
 ::-webkit-scrollbar {
   @media (hover: hover) {
-    width: 6px;
+    width: 10px;
   }
 }
 
