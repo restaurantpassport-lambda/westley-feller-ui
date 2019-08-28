@@ -99,26 +99,8 @@
 /*****************
 * Global Styling *
 *****************/
-h3 {
-  @media (max-width: $mobile) {
-    margin: 0.25rem 0;
-  }
-}
-
 p {
   font-family: $family-secondary;
-}
-
-.title:not(:last-child) {
-  @media (max-width: $mobile) {
-    margin-bottom: 0.5rem;
-  }
-}
-
-hr {
-  @media (max-width: $mobile) {
-    margin: 0.5rem 0;
-  }
 }
 
 footer {
