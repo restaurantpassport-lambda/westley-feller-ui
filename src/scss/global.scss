@@ -131,7 +131,7 @@ footer {
 * Scrollbar Styling *
 ********************/
 ::-webkit-scrollbar {
-  @media (hover: hover) {
+  @media (min-width: 1216px) {
     width: 10px;
   }
 }
