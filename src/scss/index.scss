@@ -58,13 +58,20 @@ footer {
 
   .hero-body {
     .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding: 5%;
       background: $dark;
-      border-radius: $radius;
       opacity: 0.9;
 
       hr {
+        margin: 0.75rem 0;
         background-color: $violet3;
+      }
+
+      h3 {
+        padding: 1.25rem 0 0.5rem;
       }
     }
   }
@@ -78,12 +85,21 @@ footer {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 10%;
+      padding: 5%;
       background: darken($blue9, 15);
       opacity: 0.9;
 
+      h2 {
+        margin-bottom: 0;
+      }
+
       hr {
+        margin: 0.75rem 0;
         background-color: $yellow3;
+      }
+
+      h3 {
+        padding: 1.25rem 0 0.5rem;
       }
     }
   }
