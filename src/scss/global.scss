@@ -57,7 +57,9 @@
 
 // Open navbar
 .navbar-menu {
-  animation: navOpen 0.6s ease-in-out;
+  @media (max-width: 1215px) {
+    animation: navOpen 0.6s ease-in-out;
+  }
 }
 
 @keyframes navOpen {
@@ -99,6 +101,24 @@
 /*****************
 * Global Styling *
 *****************/
+html,
+body {
+  overflow-y: visible;
+}
+
+.site-wrapper {
+  height: calc(100vh - #{$navbar-height});
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+header,
+section,
+footer {
+  scroll-snap-align: start;
+}
+
 p {
   font-family: $family-secondary;
 }

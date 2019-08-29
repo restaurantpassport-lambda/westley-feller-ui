@@ -1,4 +1,6 @@
 require("../scss/main.scss");
+require("../scss/index.scss");
+require("../scss/about.scss");
 
 document.addEventListener("DOMContentLoaded", () => {
   // Get all "navbar-burger" elements

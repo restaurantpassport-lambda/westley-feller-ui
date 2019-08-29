@@ -1,64 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Marketing page for Restaurant Passport" />
-    <meta name="theme-color" content="#df691a" />
-
-    <title>Restaurant Passport</title>
-
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
-    <link rel="stylesheet" href="main.bundle.css" />
-
-    <script type="text/javascript" src="bundle.js"></script>
+    <%= require('html-loader!./../partials/head.html') %>
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>" />
+    <link rel="stylesheet" href="home.bundle.css" />
   </head>
   <body class="has-navbar-fixed-top">
-    <nav
-      class="navbar is-fixed-top"
-      role="navigation"
-      aria-label="main-navigation"
-    >
-      <div class="navbar-brand">
-        <a class="navbar-item" href="#opener">
-          Restaurant Passport
-        </a>
-
-        <a
-          role="button"
-          class="navbar-burger"
-          data-target="navMenu"
-          aria-label="menu"
-          aria-expanded="false"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <div class="navbar-menu" id="navMenu">
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a
-                href="https://restaurant-passport-pt.netlify.com/signup"
-                class="button is-primary"
-              >
-                <strong>Sign up</strong>
-              </a>
-              <a
-                href="https://restaurant-passport-pt.netlify.com/login"
-                class="button is-light"
-              >
-                Log in
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-
+    <%= require('html-loader!./../partials/nav.html') %>
     <div class="site-wrapper">
       <main id="main">
         <header
@@ -186,17 +135,7 @@
           </div>
         </section>
       </main>
-      <footer
-        class="footer marginless has-text-centered is-one-third-height-with-navbar"
-      >
-        <h2 class="title is-size-2 is-size-4-mobile">Restaurant Passport</h2>
-        <hr />
-        <p class="is-size-4 is-size-5-mobile">
-          <a href="https://github.com/restaurantpassport-lambda"
-            >Restaurant Passport Lambda</a
-          >
-        </p>
-      </footer>
+      <%= require('html-loader!./../partials/footer.html') %>
     </div>
   </body>
 </html>

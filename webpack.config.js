@@ -12,10 +12,14 @@ const PATHS = {
 };
 
 module.exports = {
-  entry: "./src/js/index.js",
+  entry: {
+    index: ["./src/js/index.js", "./src/scss/main.scss"],
+    home: "./src/scss/index.scss",
+    about: "./src/scss/about.scss"
+  },
   output: {
     path: path.resolve("./dist"),
-    filename: "bundle.js"
+    filename: "[name].bundle.js"
   },
   optimization: {
     splitChunks: {
@@ -35,7 +39,6 @@ module.exports = {
         test: /\.(jpg|png)$/i,
         loader: "responsive-loader",
         options: {
-          // If you want to enable sharp support:
           adapter: ResponsiveLoader,
           sizes: [768, 1024, 1216, 1408],
           outputPath: "images"
@@ -47,9 +50,6 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader"
-            // options: {
-            //   url: false
-            // }
           },
           {
             loader: "postcss-loader"
@@ -58,7 +58,6 @@ module.exports = {
             loader: "sass-loader",
             options: {
               sourceMap: true
-              // options...
             }
           }
         ]
@@ -75,12 +74,27 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: "src/index.html",
+      template: "src/pages/index.html",
+      templateParameters: {
+        title: "Restaurant Passport",
+        description: "Marketing page for Restaurant Passport"
+      },
+      inject: false,
+      favicon: "favicon.png"
+    }),
+    new HtmlWebpackPlugin({
+      filename: "about.html",
+      template: "src/pages/about.html",
+      templateParameters: {
+        title: "About Us",
+        description: "About us page for the Restaurant Passport app"
+      },
       inject: false,
       favicon: "favicon.png"
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].bundle.css"
+      filename: "[name].bundle.css",
+      chunkFilename: "[name].css"
     }),
     new PurgecssPlugin({
       paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true })
