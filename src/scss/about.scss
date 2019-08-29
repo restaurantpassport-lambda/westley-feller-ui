@@ -1,5 +1,22 @@
-.tile {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+@import "variables";
+@import "global";
+
+#team {
+  .hero-body {
+    h1 {
+      width: 100%;
+    }
+
+    .tile {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 1.5rem;
+      @include fade-in(0.9, 1s);
+
+      .card {
+        border-radius: $radius;
+      }
+    }
+  }
 }

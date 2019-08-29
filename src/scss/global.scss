@@ -101,23 +101,6 @@
 /*****************
 * Global Styling *
 *****************/
-html,
-body {
-  overflow-y: visible;
-}
-
-.site-wrapper {
-  height: calc(100vh - #{$navbar-height});
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-}
-
-header,
-section,
-footer {
-  scroll-snap-align: start;
-}
 
 p {
   font-family: $family-secondary;

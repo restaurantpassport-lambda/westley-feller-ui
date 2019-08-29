@@ -13,9 +13,9 @@ const PATHS = {
 
 module.exports = {
   entry: {
-    index: ["./src/js/index.js", "./src/scss/main.scss"],
-    home: "./src/scss/index.scss",
-    about: "./src/scss/about.scss"
+    main: ["./src/js/main.js", "./src/scss/main.scss"],
+    index: ["./src/js/index.js", "./src/scss/index.scss"],
+    about: ["./src/js/about.js", "./src/scss/about.scss"]
   },
   output: {
     path: path.resolve("./dist"),
