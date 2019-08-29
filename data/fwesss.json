@@ -1,0 +1,43 @@
+{
+    "id": "fwesss",
+    "fetched_at": "2019-08-28T21:09:00",
+    "data_version": 2,
+    "result": "success",
+    "profile_name": "Westley Feller",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/10150898?v=4",
+    "card_type": "User",
+    "created_at": "2014-12-11T06:02:08",
+    "description": "Climber, hiker, musician.",
+    "emojis": {},
+    "html_url": "https://github.com/fwesss",
+    "name": "fwesss",
+    "updated_at": "2019-08-28T23:09:56",
+    "blog": "",
+    "company": null,
+    "email": "feller.westley@gmail.com",
+    "followers": 0,
+    "following": 0,
+    "location": "Yucaipa, CA",
+    "public_gists": 0,
+    "public_repos": 42,
+    "stars": 4,
+    "organizations": [],
+    "languages": {
+        "labels": [
+            "Python",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Jupyter Notebook",
+            "others"
+        ],
+        "data": [
+            13,
+            9,
+            8,
+            6,
+            1,
+            3
+        ]
+    }
+}
