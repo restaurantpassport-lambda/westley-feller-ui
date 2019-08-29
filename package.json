@@ -8,6 +8,7 @@
   "private": true,
   "dependencies": {
     "bulma": "^0.7.5",
+    "copy-webpack-plugin": "^5.0.4",
     "html-loader": "^0.5.5"
   },
   "scripts": {

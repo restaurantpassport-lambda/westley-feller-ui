@@ -5,6 +5,7 @@ const PurgecssPlugin = require("purgecss-webpack-plugin");
 const Critters = require("critters-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ResponsiveLoader = require("responsive-loader/sharp");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const PATHS = {
   src: path.join(__dirname, "src"),
@@ -92,6 +93,7 @@ module.exports = {
       inject: false,
       favicon: "favicon.png"
     }),
+    new CopyPlugin([{ from: "data", to: "dist" }]),
     new MiniCssExtractPlugin({
       filename: "[name].bundle.css",
       chunkFilename: "[name].css"
