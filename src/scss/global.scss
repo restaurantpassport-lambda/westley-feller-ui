@@ -57,7 +57,9 @@
 
 // Open navbar
 .navbar-menu {
-  animation: navOpen 0.6s ease-in-out;
+  @media (max-width: 1215px) {
+    animation: navOpen 0.6s ease-in-out;
+  }
 }
 
 @keyframes navOpen {
@@ -99,6 +101,7 @@
 /*****************
 * Global Styling *
 *****************/
+
 p {
   font-family: $family-secondary;
 }

@@ -8,6 +8,7 @@
 * Smooth scrolling
 * Lighthouse :100: :100: :100: :100:
 * Fully responsive
+* Team cards generated with ghscard
 
 ## Development
 ### Installation

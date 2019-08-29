@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= require('html-loader!./../partials/head.html') %>
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>" />
+    <link rel="stylesheet" href="about.bundle.css" />
+  </head>
+  <body class="has-navbar-fixed-top">
+    <%= require('html-loader!./../partials/nav.html') %>
+    <div class="site-wrapper">
+      <main id="main">
+        <section class="hero" id="team">
+          <div class="hero-body">
+            <div class="container has-text-centered">
+              <h1 class="is-size-1">Meet the team</h1>
+            </div>
+
+            <div class="tile is-ancestor">
+              <div class="tile">
+                <div class="card">
+                  <div class="card-image">
+                    <div class="ghscard" src="data/fwesss.json"></div>
+                  </div>
+
+                  <div class="card-header">
+                    <p class="card-header-title">UI Designer</p>
+                  </div>
+                  <div class="card-content">
+                    <p>In charge of ...</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile">
+                <div class="card">
+                  <div class="card-image">
+                    <div class="ghscard" src="data/fwesss.json"></div>
+                  </div>
+
+                  <div class="card-header">
+                    <p class="card-header-title">UI Designer</p>
+                  </div>
+                  <div class="card-content">
+                    <p>In charge of ...</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile">
+                <div class="card">
+                  <div class="card-image">
+                    <div class="ghscard" src="data/nantonacci.json"></div>
+                  </div>
+
+                  <div class="card-header">
+                    <p class="card-header-title">Front End</p>
+                  </div>
+                  <div class="card-content">
+                    <p>In charge of ...</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tile">
+                <div class="card">
+                  <div class="card-image">
+                    <div class="ghscard" src="data/sage-jordan.json"></div>
+                  </div>
+
+                  <div class="card-header">
+                    <p class="card-header-title">Front End</p>
+                  </div>
+                  <div class="card-content">
+                    <p>In charge of ...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <%= require('html-loader!./../partials/footer.html') %>
+    </div>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/gh/thombashi/ghscard@master/dist/ghscard.min.js"
+    ></script>
+  </body>
+</html>
