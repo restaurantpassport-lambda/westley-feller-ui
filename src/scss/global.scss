@@ -53,7 +53,7 @@
 ********************/
 // Push content down
 .pushed {
-  animation: pushMain 0.15s ease-in-out forwards;
+  animation: pushMain 175ms ease-in-out forwards;
 }
 
 // Open navbar
@@ -81,7 +81,7 @@
     margin-top: 0;
   }
   100% {
-    margin-top: $navbar-menu-height;
+    margin-top: 114px;
   }
 }
 
