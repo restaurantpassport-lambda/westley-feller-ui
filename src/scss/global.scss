@@ -4,12 +4,13 @@
 /*********
 * Mixins *
 *********/
-@mixin hero-background($bg-image) {
+@mixin hero-background($bg-image, $opacity: 0.9) {
   background-image: url("#{$bg-image}?size=768");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.9;
+  background-attachment: fixed;
+  opacity: $opacity;
 
   @media (min-width: 768px) {
     background-image: url("#{$bg-image}?size=1024");
@@ -101,6 +102,16 @@
 /*****************
 * Global Styling *
 *****************/
+html,
+body {
+  overflow-y: visible;
+}
+
+.site-wrapper {
+  height: calc(100vh - #{$navbar-height});
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
 
 p {
   font-family: $family-secondary;

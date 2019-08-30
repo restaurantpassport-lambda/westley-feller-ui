@@ -73,7 +73,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CopyPlugin([{ from: "data", to: "data" }]),
+    new CopyPlugin([{ from: "static/data", to: "data" }]),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "src/pages/index.html",

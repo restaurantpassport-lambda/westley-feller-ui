@@ -1,0 +1,37 @@
+{
+    "id": "warndawg",
+    "fetched_at": "2019-08-29T18:52:31",
+    "data_version": 2,
+    "result": "success",
+    "profile_name": "Kevin Warner",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/16711082?v=4",
+    "card_type": "User",
+    "created_at": "2016-01-14T22:54:09",
+    "description": null,
+    "emojis": {},
+    "html_url": "https://github.com/warndawg",
+    "name": "warndawg",
+    "updated_at": "2019-08-21T02:29:32",
+    "blog": "",
+    "company": null,
+    "email": "kevin.warner520@gmail.com",
+    "followers": 3,
+    "following": 3,
+    "location": null,
+    "public_gists": 0,
+    "public_repos": 23,
+    "stars": 0,
+    "organizations": [],
+    "languages": {
+        "labels": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ],
+        "data": [
+            10,
+            6,
+            5
+        ]
+    }
+}

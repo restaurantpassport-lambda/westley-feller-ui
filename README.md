@@ -6,7 +6,7 @@
 * Call to action
 * Fixed navbar with hamburger on mobile and tablet sized devices
 * Smooth scrolling
-* Lighthouse :100: :100: :100: :100:
+* Homepage - Lighthouse :100: :100: :100: :100:
 * Fully responsive
 * Team cards generated with ghscard
 
