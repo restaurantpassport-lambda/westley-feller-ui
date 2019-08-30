@@ -6,7 +6,6 @@ const Critters = require("critters-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ResponsiveLoader = require("responsive-loader/sharp");
 
-
 const PATHS = {
   src: path.join(__dirname, "src"),
   dist: path.join("./dist")
