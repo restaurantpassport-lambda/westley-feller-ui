@@ -1,3 +1,2 @@
-import "../../data/fwesss.json";
-
 require("../scss/about.scss");
+require("../../data/fwesss");

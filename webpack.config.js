@@ -5,6 +5,7 @@ const PurgecssPlugin = require("purgecss-webpack-plugin");
 const Critters = require("critters-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ResponsiveLoader = require("responsive-loader/sharp");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const PATHS = {
   src: path.join(__dirname, "src"),
@@ -72,6 +73,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CopyPlugin([{ from: "data", to: "data" }]),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "src/pages/index.html",
