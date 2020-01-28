@@ -1,0 +1,145 @@
+@import "variables";
+@import "colors";
+
+/*********
+* Mixins *
+*********/
+@mixin hero-background($bg-image, $opacity: 0.9) {
+  background-image: url("#{$bg-image}?size=768");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: $opacity;
+
+  @media (min-width: 768px) {
+    background-image: url("#{$bg-image}?size=1024");
+  }
+
+  @media (min-width: 1024px) {
+    background-image: url("#{$bg-image}?size=1216");
+  }
+
+  @media (min-width: 1216px) {
+    background-image: url("#{$bg-image}?size=1408");
+  }
+}
+
+/*****************
+* Helper Classes *
+*****************/
+.is-fullheight-with-navbar {
+  height: calc(100vh - #{$navbar-height});
+}
+
+.is-two-thirds-height-with-navbar {
+  height: calc((100vh - #{$navbar-height}) * 2 / 3);
+}
+
+.is-one-third-height-with-navbar {
+  height: calc((100vh - #{$navbar-height}) / 3);
+}
+
+.paddingless {
+  padding: 0 !important;
+}
+
+.marginless {
+  margin: 0 !important;
+}
+
+/********************
+* Helper Animations *
+********************/
+// Push content down
+.pushed {
+  animation: pushMain 175ms ease-in-out forwards;
+}
+
+// Open navbar
+.navbar-menu {
+  @media (max-width: 1215px) {
+    animation: navOpen 0.6s ease-in-out;
+  }
+}
+
+@keyframes navOpen {
+  0% {
+    display: none;
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+// Push main down the distance of the navbar menu
+@keyframes pushMain {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 114px;
+  }
+}
+
+// Fade content in
+@mixin fade-in($opacity: 1, $time: 0.5s) {
+  animation: fadeIn $time forwards;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: $opacity;
+    }
+  }
+}
+
+/*****************
+* Global Styling *
+*****************/
+html,
+body {
+  overflow-y: visible;
+}
+
+.site-wrapper {
+  height: calc(100vh - #{$navbar-height});
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-family: $family-secondary;
+}
+
+footer {
+  hr {
+    background-color: $orange3;
+  }
+}
+
+/********************
+* Scrollbar Styling *
+********************/
+::-webkit-scrollbar {
+  @media (min-width: 1216px) {
+    width: 10px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: $blue1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $blue9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $dark;
+}

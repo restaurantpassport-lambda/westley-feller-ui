@@ -1,0 +1,120 @@
+@import "global";
+
+.site-wrapper {
+  scroll-snap-type: y proximity;
+}
+
+header,
+section,
+footer {
+  scroll-snap-align: start;
+}
+
+/******************
+* Section Styling *
+******************/
+#opener {
+  @include hero-background("../../static/images/sushi.jpg");
+
+  .hero-body {
+    .column {
+      padding: 5%;
+      background: $dark;
+      border-radius: $radius;
+      @include fade-in(0.9, 0.5s);
+    }
+  }
+}
+
+#map {
+  @include hero-background("../../static/images/map.jpg");
+
+  .hero-body {
+    .column.right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10%;
+      background: darken($blue9, 15);
+      opacity: 0.9;
+
+      hr {
+        background-color: $cyan3;
+      }
+    }
+  }
+}
+
+#track {
+  @include hero-background("../../static/images/list.jpg");
+
+  .hero-body {
+    .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5%;
+      background: $dark;
+      opacity: 0.9;
+
+      hr {
+        margin: 0.75rem 0;
+        background-color: $violet3;
+      }
+
+      h3 {
+        padding: 1.25rem 0 0.5rem;
+      }
+    }
+  }
+}
+
+#decide {
+  @include hero-background("../../static/images/sad.jpg");
+
+  .hero-body {
+    .column.right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5%;
+      background: darken($blue9, 15);
+      opacity: 0.9;
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      hr {
+        margin: 0.75rem 0;
+        background-color: $yellow3;
+      }
+
+      h3 {
+        padding: 1.25rem 0 0.5rem;
+      }
+    }
+  }
+}
+
+#cta {
+  .hero-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10%;
+  }
+
+  h2 {
+    font-size: 7vh;
+
+    span {
+      font-weight: 600;
+      font-family: $family-secondary;
+    }
+  }
+
+  .button {
+    min-width: 30%;
+  }
+}

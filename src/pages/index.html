@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= require('html-loader!./../partials/head.html') %>
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>" />
+    <link rel="stylesheet" href="index.bundle.css" />
+  </head>
+  <body class="has-navbar-fixed-top">
+    <%= require('html-loader!./../partials/nav.html') %>
+    <div class="site-wrapper">
+      <main id="main">
+        <header
+          class="hero is-dark is-bold is-fullheight-with-navbar"
+          id="opener"
+        >
+          <div class="hero-body columns marginless">
+            <div
+              class="column is-full-mobile is-four-fifths-tablet is-three-fifths-desktop is-half-widescreen is-offset-1-tablet"
+            >
+              <h1 class="title is-1">
+                Restaurant Passport
+              </h1>
+              <p class="subtitle is-3">
+                Collect your dining experiences
+              </p>
+              <a href="#map" class="button is-primary is-medium">
+                <strong>Learn More</strong>
+              </a>
+            </div>
+          </div>
+        </header>
+
+        <section
+          class="hero is-dark is-bold is-fullheight-with-navbar"
+          id="map"
+        >
+          <div class="hero-body paddingless">
+            <div class="column is-hidden-mobile"></div>
+            <div
+              class="column right is-full-mobile is-three-fifths-tablet is-two-fifths-desktop is-fullheight-with-navbar"
+            >
+              <h2 class="title is-2">
+                Search Restaurants
+              </h2>
+              <hr />
+              <p class="is-size-6-mobile is-size-5">
+                Find restaurants in your city and check out what they have to
+                offer. Details are available for each restaurant in your area.
+              </p>
+              <hr />
+              <h3 class="is-size-4-mobile is-size-3">
+                There <span class="is-italic">is</span> something to eat!
+              </h3>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="hero is-dark is-bold is-fullheight-with-navbar"
+          id="track"
+        >
+          <div class="hero-body paddingless">
+            <div
+              class="column is-three-fifths is-half-desktop is-fullheight-with-navbar"
+            >
+              <h2 class="title is-size-3-mobile is-2">Fill Your Passport</h2>
+              <hr />
+              <p class="is-size-6-mobile is-size-5">
+                After visiting a restaurant, stamp your passport and write about
+                your experience. Show off how well you know your city with a
+                full passport.
+              </p>
+              <h3 class="is-size-3">
+                Track Your Food Journey
+              </h3>
+              <p class="is-size-6-mobile is-size-5">
+                Don't worry about trying to remember what that incredible meal
+                you had was the last time you visited. Log it in your passport
+                and recommend it to your friends. Restaurant Passport is a dream
+                for food lovers, note takers, and completionists.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="hero is-dark is-bold is-fullheight-with-navbar"
+          id="decide"
+        >
+          <div class="hero-body paddingless">
+            <div
+              class="column right is-full-mobile is-two-fifths-desktop is-fullheight-with-navbar"
+            >
+              <h2 class="title is-size-3-mobile is-size-2">
+                No More Hangry Arguments
+              </h2>
+              <hr />
+              <p class="is-size-6-mobile is-size-5">
+                Nobody wants to hear, "I don't know" or, "it doesn't matter to
+                me" when trying to find somewhere to eat. We all know "it
+                doesn't matter" isn't totally true. Use Restaurant Passport to
+                make food decisions easier.
+              </p>
+              <h3 class="is-size-4-mobile is-size-3">
+                Spend Less Time Scrolling
+              </h3>
+              <p class="is-size-6-mobile is-size-5">
+                Once the scrolling starts, it's hard to stop. Don't even start
+                blindly looking through every restaurant in your county. Use
+                Restaurant Passport to see where you've been and what you
+                actually like. Remind yourself about what you do or don't like
+                about places in your city.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="hero is-info is-bold is-two-thirds-height-with-navbar"
+          id="cta"
+        >
+          <div class="hero-body has-text-centered">
+            <h2 class="title is-size-3-mobile">
+              Start stamping your restaurant passport <span>today</span>
+            </h2>
+            <div class="container">
+              <a
+                href="https://restaurant-passport-pt.netlify.com/signup"
+                class="button is-primary is-large"
+              >
+                <strong>Sign up</strong>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <%= require('html-loader!./../partials/footer.html') %>
+    </div>
+  </body>
+</html>
