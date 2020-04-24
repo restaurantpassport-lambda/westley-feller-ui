@@ -30,7 +30,7 @@
     "html-webpack-plugin": "^3.2.0",
     "htmlhint": "^0.11.0",
     "mini-css-extract-plugin": "latest",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.0",
     "postcss-font-magician": "^2.2.2",
     "postcss-loader": "^3.0.0",
     "prettier": "1.18.2",
